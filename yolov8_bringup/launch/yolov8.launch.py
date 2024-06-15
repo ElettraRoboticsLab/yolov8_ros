@@ -28,13 +28,13 @@ def generate_launch_description():
     model = LaunchConfiguration("model")
     model_cmd = DeclareLaunchArgument(
         "model",
-        default_value="yolov8m.pt",
+        default_value="models/yolov8n.pt",
         description="Model name or path")
 
     tracker = LaunchConfiguration("tracker")
     tracker_cmd = DeclareLaunchArgument(
         "tracker",
-        default_value="bytetrack.yaml",
+        default_value="models/bytetrack.yaml",
         description="Tracker name or path")
 
     device = LaunchConfiguration("device")
@@ -58,7 +58,7 @@ def generate_launch_description():
     input_image_topic = LaunchConfiguration("input_image_topic")
     input_image_topic_cmd = DeclareLaunchArgument(
         "input_image_topic",
-        default_value="/camera/rgb/image_raw",
+        default_value="/camera/image_raw",
         description="Name of the input image topic")
 
     image_reliability = LaunchConfiguration("image_reliability")
